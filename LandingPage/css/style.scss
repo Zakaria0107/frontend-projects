@@ -1,0 +1,318 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+//********************************************************************************************
+//********************************************HERO SECTION************************************
+#hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#hero .bg-tablet{
+    width: 700px;
+    position: absolute;
+    top: -100px;
+    right: -5%;
+    z-index: -1;
+}
+nav {
+    width: 100%;
+    height: 25vh;
+    .container {
+        @extend %flex ;
+    }
+}
+.list-items{
+    width: 36%;
+    list-style-type: none;
+    @extend %flex ;
+    font-weight: 700;
+    font-size: 12px;
+    a {
+        color: hsl(228, 39%, 23%);
+    }
+    a:hover {
+        color: hsl(227, 12%, 61%);
+    }
+}
+.hamburger{
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+    background-color: hsl(12, 88%, 59%);
+    box-shadow: 1px 12px 10px -8px hsl(12, 88%, 59%);
+}
+.content .container {
+    min-height: 75vh;
+    display: flex;
+    img {
+        height: 500px;
+    }
+}
+.descreption {
+    width: 50%;
+    h1 {
+        margin-bottom: 25px;
+        font-size: 3em;
+        font-weight: 700;
+        color: hsl(228, 39%, 23%);
+        line-height: 50px;
+    }
+    p{
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 14px; 
+        padding-right: 15vw;
+        color: hsl(227, 12%, 61%);
+        line-height: 25px;
+    }
+}
+//*****************************************************************************************************
+//**********************************MEDIA QURIES FOR HERO SECTION**************************************
+@media (max-width:1100px) {
+    .list-items{
+        width: 45%;
+    }
+}
+@media (max-width:900px) {
+    nav {
+        height: 18vh;
+    }
+    .list-items{
+        display: none;
+        width: 300px;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        box-shadow: 2px 50px 50vh -5px rgb(0,0,0);
+    }
+    nav .btn {
+        display: none;
+    }
+    .hamburger {
+        display: inline;
+    }
+}
+@media (max-width:1200px) {
+    .content {
+        img {
+            width: 50%;
+        }
+        .descreption {
+            width: 60%;
+        }
+    }
+}
+@media (max-width:1030px) {
+    .container {
+        width: 85%;
+    }
+}
+@media (max-width:960px) {
+    .container {
+        width: 90%;
+    }
+    .content {
+        img {
+            width: 45%;
+        }
+        .descreption {
+            width: 70%;
+        }
+    }
+}
+@media (max-width: 780px) {
+    .content    .container {
+        flex-direction: column-reverse;
+        img , .descreption {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .descreption {
+        width: 90%;
+    }
+}
+@media (max-width:499px) {
+    .bg-tablet {
+        width: 350px;
+    }
+    .descreption h1 {
+        font-size: 2.75em;
+    }
+}
+@media (max-width:460px) {
+    .descreption h1 {
+        font-size: 2.5em;
+        line-height: 50px;
+        margin-bottom: 15px;
+    }
+    .descreption p {
+        margin-bottom: 15px;
+        padding: 0;
+    }
+}
+@media (max-width:416px) {
+    .descreption h1 {
+        font-size: 2.3em;
+    }
+}
+@media (max-width: 384px) {
+    .container {
+        width: 95%;
+    }
+    .descreption {
+        text-align: center;
+    }
+}
+//************************************************************************************************
+//**************************************ABOUT SECTION*********************************************
+#about {
+    position: relative;
+    .bg-tablet {
+        position: absolute;
+        bottom: -150%;
+        left: -40%;
+        z-index: -1;
+    }
+}
+#about  .container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .about , .more-about {
+        width: 45%;
+    }
+    h3{
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: hsl(228, 39%, 23%);
+        font-size: .9em;
+    }
+    h1  {
+        margin-bottom: 25px;
+        font-size: 2.25em;
+        font-weight: 700;
+        color: hsl(228, 39%, 23%);
+        line-height: 50px;
+    }
+    p{
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 14px; 
+        color: hsl(227, 12%, 61%);
+        line-height: 25px;
+    }
+    .first , .second ,.theird {
+         display: flex;
+         span {
+            padding: 8px 20px;
+             border-radius: 20px;
+             background-color: hsl(12, 88%, 59%);
+             color: white;
+             font-weight: 500;
+             font-size: 12px;
+             margin-right: 20px;
+        }
+    }
+}
+//**************************************************************************************************************
+//************************************MEDIA QUERIES FOR ABOUT SECTION*******************************************
+@media (max-width : 780px) {
+    #about .container {
+        flex-direction: column;
+        .about , .more-about {
+            width: 90%;
+        }
+    }
+}
+@media (max-width : 480px) {
+    .about , .more-about {
+        width: 100%;
+    }
+}
+@media (max-width : 375px) {
+    .more-about span {
+        margin-right: 10px;
+    }
+}
+//*********************************************************************************************************
+//*******************************************FEEDBACK SECTION**********************************************
+.feed-back{
+    text-align: center;
+    padding: 100px 0;
+    h1  {
+        margin-bottom: 25px;
+        font-size: 2.25em;
+        font-weight: 700;
+        color: hsl(228, 39%, 23%);
+        line-height: 50px;
+    }
+    .opinions {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 475px 475px 475px 475px;
+        grid-template-rows: 200px;
+        grid-gap: 25px;
+    }
+}
+.opinion {
+    background-color: hsl(0, 0%, 98%);
+    padding: 0 50px;
+    img {
+        width: 60px;
+        margin-top: -25px;
+    }
+    h3 {
+        margin: 15px 0;
+        font-weight: 700;
+        color: hsl(228, 39%, 23%);
+        font-size: .9em;
+    }
+    p {
+        color: hsl(227, 12%, 61%);
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+//************************************************************************************************************
+//*********************************MEDIA QUERIES FOR THE FEEDBACK SECTION*************************************
+
+
+
+
+//**********************************************************************************************
+//**********************************************************************************************

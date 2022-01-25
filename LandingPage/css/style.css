@@ -1,0 +1,370 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+nav .container, .list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+#hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .bg-tablet {
+  width: 700px;
+  position: absolute;
+  top: -100px;
+  right: -5%;
+  z-index: -1;
+}
+
+nav {
+  width: 100%;
+  height: 25vh;
+}
+
+.list-items {
+  width: 36%;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.list-items a {
+  color: #242d52;
+}
+
+.list-items a:hover {
+  color: #9095a7;
+}
+
+.hamburger {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 40px;
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  background-color: #f25f3a;
+  -webkit-box-shadow: 1px 12px 10px -8px #f25f3a;
+          box-shadow: 1px 12px 10px -8px #f25f3a;
+}
+
+.content .container {
+  min-height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .container img {
+  height: 500px;
+}
+
+.descreption {
+  width: 50%;
+}
+
+.descreption h1 {
+  margin-bottom: 25px;
+  font-size: 3em;
+  font-weight: 700;
+  color: #242d52;
+  line-height: 50px;
+}
+
+.descreption p {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  padding-right: 15vw;
+  color: #9095a7;
+  line-height: 25px;
+}
+
+@media (max-width: 1100px) {
+  .list-items {
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    height: 18vh;
+  }
+  .list-items {
+    display: none;
+    width: 300px;
+    height: 40vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: white;
+    -webkit-box-shadow: 2px 50px 50vh -5px black;
+            box-shadow: 2px 50px 50vh -5px black;
+  }
+  nav .btn {
+    display: none;
+  }
+  .hamburger {
+    display: inline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content img {
+    width: 50%;
+  }
+  .content .descreption {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 90%;
+  }
+  .content img {
+    width: 45%;
+  }
+  .content .descreption {
+    width: 70%;
+  }
+}
+
+@media (max-width: 780px) {
+  .content .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .content .container img, .content .container .descreption {
+    width: 100%;
+    height: auto;
+  }
+  .descreption {
+    width: 90%;
+  }
+}
+
+@media (max-width: 499px) {
+  .bg-tablet {
+    width: 350px;
+  }
+  .descreption h1 {
+    font-size: 2.75em;
+  }
+}
+
+@media (max-width: 460px) {
+  .descreption h1 {
+    font-size: 2.5em;
+    line-height: 50px;
+    margin-bottom: 15px;
+  }
+  .descreption p {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 416px) {
+  .descreption h1 {
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 384px) {
+  .container {
+    width: 95%;
+  }
+  .descreption {
+    text-align: center;
+  }
+}
+
+#about {
+  position: relative;
+}
+
+#about .bg-tablet {
+  position: absolute;
+  bottom: -150%;
+  left: -40%;
+  z-index: -1;
+}
+
+#about .container {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#about .container .about, #about .container .more-about {
+  width: 45%;
+}
+
+#about .container h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #242d52;
+  font-size: .9em;
+}
+
+#about .container h1 {
+  margin-bottom: 25px;
+  font-size: 2.25em;
+  font-weight: 700;
+  color: #242d52;
+  line-height: 50px;
+}
+
+#about .container p {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9095a7;
+  line-height: 25px;
+}
+
+#about .container .first, #about .container .second, #about .container .theird {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about .container .first span, #about .container .second span, #about .container .theird span {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #f25f3a;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+@media (max-width: 780px) {
+  #about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .container .about, #about .container .more-about {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about, .more-about {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .more-about span {
+    margin-right: 10px;
+  }
+}
+
+.feed-back {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.feed-back h1 {
+  margin-bottom: 25px;
+  font-size: 2.25em;
+  font-weight: 700;
+  color: #242d52;
+  line-height: 50px;
+}
+
+.feed-back .opinions {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 475px 475px 475px 475px;
+      grid-template-columns: 475px 475px 475px 475px;
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+  grid-gap: 25px;
+}
+
+.opinion {
+  background-color: #fafafa;
+  padding: 0 50px;
+}
+
+.opinion img {
+  width: 60px;
+  margin-top: -25px;
+}
+
+.opinion h3 {
+  margin: 15px 0;
+  font-weight: 700;
+  color: #242d52;
+  font-size: .9em;
+}
+
+.opinion p {
+  color: #9095a7;
+  font-size: 15px;
+  line-height: 20px;
+}
+/*# sourceMappingURL=style.css.map */
