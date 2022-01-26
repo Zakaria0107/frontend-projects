@@ -296,6 +296,12 @@ nav {
   margin-right: 20px;
 }
 
+@media (max-width: 1100px) {
+  #about .bg-tablet {
+    display: none;
+  }
+}
+
 @media (max-width: 780px) {
   #about .container {
     -webkit-box-orient: vertical;
@@ -334,6 +340,9 @@ nav {
 }
 
 .feed-back .opinions {
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
   padding-top: 50px;
   padding-bottom: 30px;
   display: -ms-grid;
@@ -343,6 +352,10 @@ nav {
   -ms-grid-rows: 200px;
       grid-template-rows: 200px;
   grid-gap: 25px;
+}
+
+.feed-back .btn {
+  margin-top: 20px;
 }
 
 .opinion {
@@ -366,5 +379,14 @@ nav {
   color: #9095a7;
   font-size: 15px;
   line-height: 20px;
+}
+
+@media (max-width: 550px) {
+  .opinions {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 300px 300px 300px 300px;
+        grid-template-columns: 300px 300px 300px 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -248,8 +248,14 @@ nav {
         }
     }
 }
+
 //**************************************************************************************************************
 //************************************MEDIA QUERIES FOR ABOUT SECTION*******************************************
+@media (max-width : 1100px) {
+    #about .bg-tablet {
+        display: none;
+    }
+}
 @media (max-width : 780px) {
     #about .container {
         flex-direction: column;
@@ -281,12 +287,18 @@ nav {
         line-height: 50px;
     }
     .opinions {
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none;
         padding-top: 50px;
         padding-bottom: 30px;
         display: grid;
         grid-template-columns: 475px 475px 475px 475px;
         grid-template-rows: 200px;
         grid-gap: 25px;
+    }
+    .btn {
+        margin-top: 20px;
     }
 }
 .opinion {
@@ -310,7 +322,12 @@ nav {
 }
 //************************************************************************************************************
 //*********************************MEDIA QUERIES FOR THE FEEDBACK SECTION*************************************
-
+@media (max-width: 550px) {
+    .opinions {
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+    }
+}
 
 
 
