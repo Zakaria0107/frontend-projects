@@ -342,7 +342,6 @@ nav {
 .feed-back .opinions {
   width: 100%;
   overflow-x: scroll;
-  scrollbar-width: none;
   padding-top: 50px;
   padding-bottom: 30px;
   display: -ms-grid;
