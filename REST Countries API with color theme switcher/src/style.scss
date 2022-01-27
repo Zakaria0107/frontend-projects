@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+}
+i {
+    padding: 0 8px;
+    font-weight: 300;
+}
+.dark-mode {
+    background-color:hsl(207, 26%, 17%) ;
+    color: white;
+    nav , input ,  select , .Card{
+        background-color: hsl(209, 23%, 22%);
+        color:white;
+        
+    }
+    .Card p {
+        color:hsl(0, 0%, 98%);
+    }
+}
+.light-mode {
+    background-color:hsl(0, 0%, 98%) ;
+    color: black;
+    nav , input ,  select , .Card{
+        background-color: white;
+        box-shadow: 1px 1px 5px hsl(0, 0%, 89%);
+        color: black;
+    }
+    .Card p {
+        color: black;
+    }
+}
+.container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav p {
+    cursor: pointer;
+}
+form {
+    margin-top: 20px;
+    input {
+        width: 450px;
+        height: 7vh;
+        border: none;
+        padding: 20px 50px ;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+    select {
+        width: 200px;
+        height: 7vh;
+        border: none;
+        padding: 0 20px;
+        border-radius: 5px;  
+    }
+    input:focus , select:focus{
+        outline: none;
+    }
+}
+nav  , form {
+    width: 100%;
+    height: 10vh;
+    .container {
+        @extend %flex ;
+    }
+}
+@media (max-width : 530px) {
+    nav .container , form .container {
+        width: 95%;
+        position: relative;
+    }
+    form input {
+        width: 110%;
+    }  
+}
+@media (max-width : 430px) {
+    nav h2  {
+        font-size: 15px;
+    }
+    nav p {
+        font-size: 12px;
+    }
+    
+}
+.countries {
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+} 
+.Card{
+    width: 263px;
+    height: 335px;
+    overflow: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+    margin:0px 25px 45px 0;
+    img{
+        width: 100%;
+        height: 160px;
+    }
+    
+}
+.infos {
+    padding: 20px;
+    h4 {
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25px;
+        span {
+            color: hsl(0, 0%, 52%);
+        }
+    }
+}
+@media (max-width : 645px) {
+    .countries{
+        justify-content: center;
+    }
+}
+
+#about {
+    .back {
+        margin: 50px 0;
+    }
+    button {
+        height: 30px;
+        background-color: hsl(209, 23%, 22%);
+        border: none;
+        color: hsl(0, 0%, 98%);
+        box-shadow: 1px 1px 5px rgb(14, 13, 13);
+        padding: 5px 30px;
+    }
+    .infos{
+        padding: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+            width: 500px;
+            height: 375px;
+        }
+        .details {
+            width: 55%;
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .all {
+            display: flex;
+            justify-content: space-between;
+        }
+        .borders {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+@media (max-width : 1100px) {
+    #about .infos {
+        flex-direction: column;
+        .details {
+            width: 100%;
+        }
+        
+    }
+}
