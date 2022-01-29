@@ -26,7 +26,6 @@ main {
         border: 1px solid black;
         margin: 10px 0;
         background-color: #0b090a;
-        color: white;
         font-size: 16px;
         font-weight: 700;
     }
@@ -36,7 +35,6 @@ main {
         outline: none;
     }
 }
-
 #title , #count , #category , #search , .btn{
     display: block;
     width: 100%;
@@ -45,17 +43,15 @@ span {
     background-color: #660708;
     padding: 10px;
     border-radius: 10px;
-    color: white;
 }
 span::before{
-    content: 'Total :';
+    content: 'Total : ';
     font-weight: bold;
 }
 .btn {
     padding: 15px;
     border: none;
     background-color: rgb(59, 59, 245);
-    color: white;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -75,7 +71,6 @@ span::before{
 table {
     width: 1250px;
     margin: 20px 0;
-    color: white;
     text-align: center;
     th {
         font-size: 18px;
@@ -84,7 +79,6 @@ table {
         padding:8px 15px;
         border: none;
         background-color: rgb(59, 59, 245);
-        color: white;
         border-radius: 10px;
         font-size: 18px;
         font-weight: bold;

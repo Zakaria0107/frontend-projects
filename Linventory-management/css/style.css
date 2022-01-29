@@ -33,7 +33,6 @@ main input {
   border: 1px solid black;
   margin: 10px 0;
   background-color: #0b090a;
-  color: white;
   font-size: 16px;
   font-weight: 700;
 }
@@ -54,11 +53,10 @@ span {
   background-color: #660708;
   padding: 10px;
   border-radius: 10px;
-  color: white;
 }
 
 span::before {
-  content: 'Total :';
+  content: 'Total : ';
   font-weight: bold;
 }
 
@@ -66,7 +64,6 @@ span::before {
   padding: 15px;
   border: none;
   background-color: #3b3bf5;
-  color: white;
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
@@ -95,7 +92,6 @@ span::before {
 table {
   width: 1250px;
   margin: 20px 0;
-  color: white;
   text-align: center;
 }
 
@@ -107,7 +103,6 @@ table .table-btn {
   padding: 8px 15px;
   border: none;
   background-color: #3b3bf5;
-  color: white;
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
