@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header><h1>inventory management</h1></header>
+        <main>
+            <input type="text" id="title" placeholder="Title">
+            <div class="total">
+                <input type="number" placeholder="Price" id="price">
+                <input type="number" placeholder="Taxes" id="taxes">
+                <input type="number" placeholder="Ads" id="ads">
+                <input type="number" placeholder="Discount" id="discount">
+                <span id="total"></span>
+            </div>
+            <input type="number" placeholder="Count" id="count">
+            <input type="text" placeholder="Category" id="category">
+            <button class="btn create">Create</button>
+            <input type="search" placeholder="Search" id="search">
+            <div class="search-btns">
+                <button class="btn">Search by category</button>
+                <button class="btn">Search by title</button>
+            </div>
+        </main>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>TAXES</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>TOTAL</th>
+                <th>CATEGORY</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>samsung 7</td>
+                <td>12000</td>
+                <td>12</td>
+                <td>10</td>
+                <td>9</td>
+                <td>11011</td>
+                <td>phone</td>
+                <td><button class="table-btn" id="update">update</button></td>
+                <td><button class="table-btn" id="delete">delete</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
