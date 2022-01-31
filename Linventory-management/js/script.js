@@ -18,9 +18,15 @@ ads = document.querySelector("#ads")
 discount = document.querySelector("#discount")
 total = document.querySelector("#total")
 category = document.querySelector("#category")
-Allproducts = [] 
+//declation of array that contain all the products from the local storge if this last was exist
+let Allproducts = []
+if(localStorage.getItem("collection") != null){ 
+    Allproducts = JSON.parse(localStorage.getItem("collection"))
+}
+showData(Allproducts)
 
-//CALCUL TOTAL
+
+//CALCUL TOTAL PRICE
 function calculPrice(){
     let resultat ; 
     if(price.value != "" && taxes.value != "" && ads.value != "" && discount.value != ""){
@@ -33,21 +39,21 @@ taxes.onkeyup = calculPrice
 ads.onkeyup = calculPrice
 discount.onkeyup = calculPrice
 
-//SHOW DATA
-function showData(){
+//SHOW DATA IN THE TABLE
+function showData(Arr){
     title.value=price.value=taxes.value=ads.value=discount.value=total.textContent=category.value = "" 
     document.querySelector("#productsList").innerHTML = ""
-    for( i = 0 ; i < Allproducts.length ; i++){
+    for( i = 0 ; i < Arr.length ; i++){
         document.querySelector("#productsList").innerHTML += `
             <tr>
                 <td>${i+1}</td>
-                <td>${Allproducts[i].title}</td>
-                <td>${Allproducts[i].price}</td>
-                <td>${Allproducts[i].taxes}</td>
-                <td>${Allproducts[i].ads}</td>
-                <td>${Allproducts[i].discount}</td>
-                <td>${Allproducts[i].total}</td>
-                <td>${Allproducts[i].category}</td>
+                <td>${Arr[i].title}</td>
+                <td>${Arr[i].price}</td>
+                <td>${Arr[i].taxes}</td>
+                <td>${Arr[i].ads}</td>
+                <td>${Arr[i].discount}</td>
+                <td>${Arr[i].total}</td>
+                <td>${Arr[i].category}</td>
                 <td><button onclick="updateData(${i})" class="table-btn update">update</button></td>
                 <td><button onclick="deleteData(${i})" class="table-btn delete">delete</button></td>
             </tr>
@@ -55,28 +61,29 @@ function showData(){
     }
 }
 
-// CREATE 
+// CREATE  A PRODUCT IN THE TABLE
 document.querySelector(".create").onclick = () => {
     if(title.value != "" && price.value != "" && taxes.value != "" &&  
         ads.value != "" && discount.value != "" && total.textContent != "" && category.value != "" ){
         let product = new Product(title.value , price.value , taxes.value , 
             ads.value , discount.value , total.textContent , category.value)
         Allproducts.push(product);
-        showData();
-        console.log(Allproducts)
+        localStorage.setItem("collection" , JSON.stringify(Allproducts))
+        showData(Allproducts);
     }else {
         alert("you should put all values")
     } 
 }
 
 
-//DELETE
+//DELETE A PRODUCTE FROM THE TABLE
 function deleteData(i){
     Allproducts.splice(i , 1)
-    showData()
+    localStorage.setItem("collection" , JSON.stringify(Allproducts))
+    showData(Allproducts)
 }
 
-//UPDATE
+//UPDATE THE INFORMATION OF A PRODUCT
 let index ; 
 function updateData(i){
     title.value     = Allproducts[i].title ; 
@@ -101,6 +108,39 @@ function changeData(){
     Allproducts[index].category = category.value; 
     document.querySelector(".create").style.display = "block"
     document.querySelector(".updateData").style.display = "none"
-    showData()
+    localStorage.setItem("collection" , JSON.stringify(Allproducts))
+    showData(Allproducts)
 }
 document.querySelector(".updateData").onclick = changeData
+
+
+//SEARCH
+//searcj for products by there category
+search = document.querySelector("#search")
+let resultat = []
+document.querySelector("#byCategory").onclick = () => {
+    if(search.value != ""){
+        for(i = 0 ; i < Allproducts.length ; i++){ 
+           if(Allproducts[i].category.includes(search.value)){
+                resultat.push(Allproducts[i])
+           } 
+        }
+        showData(resultat)
+        resultat =  []
+    }
+}
+//search for products by there names
+document.querySelector("#byTitle").onclick = () => {
+    if(search.value != ""){
+        for(i = 0 ; i < Allproducts.length ; i++){ 
+            if(Allproducts[i].title.includes(search.value)){
+                 resultat.push(Allproducts[i])
+            } 
+         }
+        showData(resultat)
+        resultat =  []
+    }
+}
+search.onkeyup = function emptySearch(){
+    if(search.value == "") showData(Allproducts)
+}
