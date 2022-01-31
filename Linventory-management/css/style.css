@@ -111,4 +111,8 @@ table .table-btn {
 button {
   cursor: pointer;
 }
+
+.updateData {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
