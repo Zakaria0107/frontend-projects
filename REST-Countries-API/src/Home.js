@@ -7,7 +7,6 @@ function Home(){
         const responce = await fetch("https://restcountries.com/v2/all")
         const data = await responce.json()
         setItems(data)
-        console.log(data)
     }
     let searchByName = async () =>{
         let name = document.querySelector("input").value ;
@@ -18,7 +17,6 @@ function Home(){
             let data = await responce.json();
             if(data.status == 404) setItems([])
             else setItems(data)
-            console.log(data)
         }
     }
     useEffect(async () => {
@@ -34,7 +32,7 @@ function Home(){
         <div className="countries container">
         {
             items.map((item,index) =>
-                <Link to={`about/${item.name}`}>
+                <Link key={index} to={`about/${item.name}`}>
                     <Card 
                         image_url={item.flag} 
                         name = {item.name}

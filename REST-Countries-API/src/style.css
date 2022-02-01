@@ -164,11 +164,15 @@ nav, form {
   color: #858585;
 }
 
-@media (max-width: 645px) {
+@media (max-width: 657px) {
   .countries {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .Card {
+    width: 300px;
+    height: 350px;
   }
 }
 
@@ -200,12 +204,11 @@ nav, form {
 }
 
 #about .infos img {
-  width: 500px;
-  height: 375px;
+  width: 45%;
 }
 
 #about .infos .details {
-  width: 55%;
+  width: 50%;
   padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,15 +230,22 @@ nav, form {
           justify-content: space-between;
 }
 
+#about .infos .all p {
+  line-height: 30px;
+}
+
 #about .infos .borders {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#about .infos .borders button {
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1100px) {
@@ -245,8 +255,21 @@ nav, form {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about .infos .details {
+  #about .infos img {
     width: 100%;
+  }
+  #about .infos .details {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .details .all {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

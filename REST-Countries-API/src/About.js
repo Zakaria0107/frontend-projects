@@ -7,7 +7,6 @@ function About(){
         let responce = await fetch(`https://restcountries.com/v2/name/${title}`);
         let data = await responce.json();
          setInfo(data[0])
-        console.log(data)
     },[title])
     const { name, flag, population, region,
         capital, nativeName, subregion, topLevelDomain,
@@ -50,7 +49,7 @@ function About(){
                     <div className="borders">
                                 <h4 >Border Countries : </h4>
                                 {borders ?borders.map(border => (
-                                    <button>{border}</button>
+                                    <button key={border}>{border}</button>
                                 )): ""}
                         </div>
                 </div>
