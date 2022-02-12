@@ -47,7 +47,7 @@ clear = document.querySelector('#clear')
 function allTodos(){
     messions = document.querySelectorAll(".mession");
    for (let j = 0; j < messions.length; j++)
-     messions[j].style.display="flex";
+      messions[j].style.display="flex";
 }
 all.onclick = allTodos
 all_2.onclick = allTodos

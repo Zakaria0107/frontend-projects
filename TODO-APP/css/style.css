@@ -167,6 +167,11 @@ body {
   border: none;
 }
 
+.checked + p {
+  text-decoration: line-through;
+  color: #4d5066;
+}
+
 .small-device {
   display: none;
   height: 50px;
@@ -180,6 +185,10 @@ body {
 
 .small-device .categories {
   width: 70%;
+}
+
+.active {
+  color: #5c5cfa !important;
 }
 
 button {

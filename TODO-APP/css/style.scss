@@ -136,6 +136,10 @@ body{
     background-image: linear-gradient(to right ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     border: none;
 }
+.checked + p {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
 .small-device {
     display: none;
     height: 50px;
@@ -147,6 +151,9 @@ body{
         width: 70%;
         @extend %flex;
     }
+}
+.active {
+    color: rgb(92, 92, 250) !important;
 }
 button {
     border: none;
