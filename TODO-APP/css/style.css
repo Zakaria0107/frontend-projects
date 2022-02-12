@@ -180,7 +180,11 @@ body {
 
 .small-device .categories {
   width: 70%;
-  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 @media (max-width: 600px) {

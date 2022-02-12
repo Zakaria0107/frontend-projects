@@ -38,9 +38,9 @@ list.addEventListener("click",function(event){
 all = document.querySelector('#all')
 active = document.querySelector('#active')
 completed = document.querySelector('#completed')
-all_2 = document.querySelector('#all-2')
-active_2 = document.querySelector('#active-2')
-completed_2 = document.querySelector('#completed-2')
+all_2 = document.querySelector('#all-2 button')
+active_2 = document.querySelector('#active-2 button')
+completed_2 = document.querySelector('#completed-2 button')
 clear = document.querySelector('#clear')
 
 //show all

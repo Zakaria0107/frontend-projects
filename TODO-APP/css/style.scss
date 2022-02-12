@@ -146,9 +146,11 @@ body{
     .categories {
         width: 70%;
         @extend %flex;
-        cursor: pointer;
     }
-
+}
+button {
+    border: none;
+    background-color: transparent;
 }
 @media (max-width : 600px) {
     .container {
