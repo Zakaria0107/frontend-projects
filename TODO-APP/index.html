@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <div class="header">
+            <h1>TODO</h1>
+            <i id="theme"><img src="images/icon-sun.svg" alt=""></i>
+        </div>
+        <div class="field">
+            <span class="circle"></span>
+            <form >
+                <input type="text" name="todo" placeholder="Create a new todo...">
+            </form>
+        </div>
+        <div class="content">
+            <ul id="todos-list">
+            </ul>
+            <div class="choces">
+                <p><span id="nbrItems"></span> items left</p>
+                    <ul class="categories">
+                        <li id="all">All</li>
+                        <li id="active">Active</li>
+                        <li id="completed">Completed</li>
+                    </ul>
+                <p id="clear">Clear Completed</p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>  
+</body>
+</html>
