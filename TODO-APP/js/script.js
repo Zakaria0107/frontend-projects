@@ -33,35 +33,50 @@ list.addEventListener("click",function(event){
 })
 
 
+
 // to show all or specefic messsoin 
-let all = document.querySelector('#all'),
-    active = document.querySelector('#active'),
-    completed = document.querySelector('#completed'),
-    clear = document.querySelector('#clear');
+all = document.querySelector('#all')
+active = document.querySelector('#active')
+completed = document.querySelector('#completed')
+all_2 = document.querySelector('#all-2')
+active_2 = document.querySelector('#active-2')
+completed_2 = document.querySelector('#completed-2')
+clear = document.querySelector('#clear')
+
 //show all
-all.addEventListener("click" , function(){
+function allTodos(){
     messions = document.querySelectorAll(".mession");
    for (let j = 0; j < messions.length; j++)
      messions[j].style.display="flex";
-})
+}
+all.onclick = allTodos
+all_2.onclick = allTodos
+
+
 //show not completed todos
-active.addEventListener("click" , function(){
+function notCompletedTodos(){
     let messions = document.querySelectorAll(".mession span");
     for(j=0;j<messions.length;j++)
        if(messions[j].classList.contains("checked"))
             messions[j].parentElement.style.display = "none";
        else
           messions[j].parentElement.style.display = "flex"; 
-})
+}
+active.onclick = notCompletedTodos
+active_2.onclick = notCompletedTodos
+
+
 //show completed todos
-completed.addEventListener("click", function(){
+function completedTodos(){
   let messions = document.querySelectorAll(".mession span");
   for(j=0;j<messions.length;j++)
     if(messions[j].classList.contains("checked"))
         messions[j].parentElement.style.display = "flex";
     else
        messions[j].parentElement.style.display = "none"; 
-})
+}
+completed.onclick = completedTodos
+completed_2.onclick = completedTodos
 //delete completed todos
 clear.addEventListener("click",function(){
     let messions = document.querySelectorAll(".mession span");

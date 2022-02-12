@@ -55,7 +55,7 @@ body{
 .field {
     @extend %flex;
     width: 100%;
-    height: 8vh;
+    height: 50px;
     border-radius: 5px;
     padding: 20px;
     form {
@@ -95,7 +95,7 @@ body{
         li {
             @extend %flex;
             width: 100%;
-            height: 8vh;
+            height: 50px;
             p {
                 width: 90%;
                 font-size: 18px;
@@ -113,7 +113,7 @@ body{
     }
     .choces {
         @extend %flex;
-        height: 8vh;
+        height: 50px;
         font-size: 12px;
         padding: 15px;
         color: hsl(233, 14%, 35%);
@@ -137,11 +137,11 @@ body{
     border: none;
 }
 .small-device {
-    height: 8vh;
+    display: none;
+    height: 50px;
     font-size: 12px;
     padding: 15px;
     color: hsl(233, 14%, 35%);
-    display: flex;
     justify-content: center;
     .categories {
         width: 70%;
@@ -155,8 +155,11 @@ body{
         width: 95%;
     }
 }
-@media (max-width : 400px) {
+@media (max-width : 450px) {
     .choces .categories {
         display: none !important;
+    }
+    .small-device {
+        display: flex;
     }
 }
