@@ -187,10 +187,6 @@ body {
   width: 70%;
 }
 
-.active {
-  color: #5c5cfa !important;
-}
-
 button {
   border: none;
   background-color: transparent;
