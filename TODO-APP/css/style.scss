@@ -151,6 +151,10 @@ body{
 button {
     border: none;
     background-color: transparent;
+    outline: none;
+}
+button:focus {
+    outline: none;
 }
 @media (max-width : 600px) {
     .container {

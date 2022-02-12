@@ -18,18 +18,21 @@ form.onsubmit = function(event){
 }
 
 // checked or delete
+once = 1
 list.addEventListener("click",function(event){
-    if(event.target.tagName === "IMG"){
-        father = event.target.parentElement;
-        father.parentElement.remove();
-        nbrItems.innerHTML = --i; 
-    }
-    if(event.target.tagName === "SPAN"){
-        event.target.innerHTML = `<i class="check"><img src="images/icon-check.svg" alt=""></i>`
-        event.target.classList.add("checked");
-        father = event.target.parentElement;
-        father.parentElement.classList.add("check");
-    }     
+    if(once == 1){
+        if(event.target.tagName === "IMG"){
+          father = event.target.parentElement;
+          father.parentElement.remove();
+          nbrItems.innerHTML = --i; 
+        }
+        if(event.target.tagName === "SPAN"){
+            event.target.innerHTML = `<i class="check"><img src="images/icon-check.svg" alt=""></i>`
+            event.target.classList.add("checked");
+            father = event.target.parentElement;
+            father.parentElement.classList.add("check");
+        } 
+    }    
 })
 
 
