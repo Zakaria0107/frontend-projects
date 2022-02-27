@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+}
+
+body, button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  height: 100vh;
+  background-color: #202632;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 540px;
+  height: 300px;
+  background-color: #313a49;
+  border-radius: 15px;
+  padding: 40px 50px;
+}
+
+span {
+  color: #48d591;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+q {
+  color: #c9dbe5;
+  font-size: 28px;
+  text-align: center;
+  margin: 18px;
+}
+
+button {
+  background-color: #55ffa9;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -25px;
+}
+
+button img {
+  width: 20px;
+}
+
+button:hover {
+  -webkit-box-shadow: 2px 2px 25px #55ffa9;
+          box-shadow: 2px 2px 25px #55ffa9;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  .container + img {
+    margin-bottom: 10px;
+  }
+  .container q {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
