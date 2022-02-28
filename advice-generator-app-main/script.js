@@ -9,5 +9,12 @@ loadData = async () => {
     advice.innerHTML = data.slip.advice
 }
 loadData()
-
+window.addEventListener("resize",changeWidth);
+function changeWidth(){
+    if(window.innerWidth < 550)
+        document.querySelector("#pattern").setAttribute("src" , "./images/pattern-divider-mobile.svg")
+    else 
+        document.querySelector("#pattern").setAttribute("src" , "./images/pattern-divider-desktop.svg")
+    console.log(window.innerWidth)
+}
 btn.onclick = loadData

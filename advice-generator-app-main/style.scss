@@ -49,6 +49,7 @@ button {
     @extend %center ;
     position: absolute;
     bottom: -25px;
+    outline: none;
     img {
         width: 20px;
     }
@@ -59,14 +60,17 @@ button:hover {
 
 @media (max-width : 550px) {
     .container {
-        width: 90%;
+        width: 95%;
         height: auto;
         padding: 20px;
-        + img {
-            margin-bottom: 10px;
+        #pattern {
+            margin-bottom: 15px;
         }
         q {
             font-size: 20px;
+        }
+        button {
+            bottom: -25px;
         }
     }
 }

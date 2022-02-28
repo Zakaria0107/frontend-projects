@@ -68,6 +68,7 @@ button {
   border-radius: 50%;
   position: absolute;
   bottom: -25px;
+  outline: none;
 }
 
 button img {
@@ -81,15 +82,18 @@ button:hover {
 
 @media (max-width: 550px) {
   .container {
-    width: 90%;
+    width: 95%;
     height: auto;
     padding: 20px;
   }
-  .container + img {
-    margin-bottom: 10px;
+  .container #pattern {
+    margin-bottom: 15px;
   }
   .container q {
     font-size: 20px;
+  }
+  .container button {
+    bottom: -25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
