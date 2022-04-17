@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #190028;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3a015c;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container textarea {
+  width: 375px;
+  height: 400px;
+  padding: 10px;
+  outline: none;
+}
+
+.container select {
+  margin: 10px 0;
+  outline: none;
+  padding: 10px;
+}
+
+.container input {
+  outline: none;
+  padding: 10px;
+}
+
+.empty {
+  border: 2px solid red;
+  -webkit-box-shadow: 1px 1px 15px red;
+          box-shadow: 1px 1px 15px red;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 10px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .cipherPart {
+    margin: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

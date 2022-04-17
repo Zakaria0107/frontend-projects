@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clearPart">
+            <textarea placeholder="Clear text..."></textarea>
+            <select>
+                <option value="1">Caesar cipher</option>
+                <option value="2">Vigenere cipher</option>
+            </select>
+            <input type="text" placeholder="Key">
+        </div>
+        <div class="cipherPart">
+            <textarea placeholder="Cipher text..."></textarea>
+            <select>
+                <option value="1">Caesar cipher</option>
+                <option value="2">Vigenere cipher</option>
+            </select>
+            <input type="text" placeholder="Key">
+        </div>
+    </div>
+    <div>
+        <button id="cipher">cipher</button>
+        <button id="decipher">decipher</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

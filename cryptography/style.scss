@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #190028;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a015c;
+    padding: 40px;
+    border-radius: 10px;
+    div {
+        display:  flex;
+        flex-direction: column;
+    }
+    textarea {
+        width: 375px;
+        height: 400px;
+        padding: 10px;
+        outline: none;
+    }
+    select {
+        margin: 10px 0;
+        outline: none;
+        padding: 10px;
+    }
+    input {
+        outline: none;
+        padding: 10px;
+    }
+}
+.empty {
+    border:2px solid red;
+    box-shadow: 1px 1px 15px red;
+}
+button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+}
+@media (max-width : 1060px ) {
+    .container {
+        width: 90%;
+    }
+}
+@media (max-width : 950px) {
+    .container {
+        width: auto;
+        justify-content: space-around;
+        flex-direction: column;
+        .cipherPart {
+            margin: 20px;
+        }
+    }
+}
