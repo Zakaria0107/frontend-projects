@@ -10,7 +10,7 @@ body {
 }
 .header {
     width: 100%;
-    height: 20vh;
+    height: 24vh;
     background: url(./images/bg-header-desktop.svg) no-repeat;
     background-color: hsl(180, 29%, 50%);
 }
@@ -25,13 +25,21 @@ body {
         padding: 20px;
         background-color: white;
         margin-bottom: 20px;
+        border-radius: 10px;
+        hr {
+            display: none;
+        }
+        p {
+            color: hsl(180, 29%, 50%);
+        }
         .new , .featured {
-            padding: 4px 5px;
+            padding: 6px 5px 4px 5px;
             border-radius: 10px;
             margin-right: 10px;
             color: white;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 12px;
+            border: none;
         }
         .new {
             background-color: hsl(180, 29%, 50%);
@@ -40,20 +48,8 @@ body {
             background-color: hsl(180, 14%, 20%);
         }
         .informations {
-            width: 45%;
-        }
-        button {
-            padding: 10px;
-            color:hsl(180, 29%, 50%) ;
-            background-color:hsl(180, 52%, 96%) ;
-            border: none;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: all .3 ease-in-out;
-        }
-        button:hover {
-            background-color:hsl(180, 29%, 50%) ;
-            color:hsl(180, 52%, 96%) ;
+            width: 50%;
+            margin-left: 20px;
         }
         h3 {
             margin: 10px 0;
@@ -65,12 +61,62 @@ body {
             color: hsl(180, 29%, 50%);
         }
         h3 + p {
-            color: gray;
+            color: rgb(163, 162, 162);
             font-size: 15px;
         } 
         .skills {
-            width: 45%;
+            width: 35%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .skills button {
+            padding: 10px;
+            color:hsl(180, 29%, 50%) ;
+            background-color:hsl(180, 52%, 96%) ;
+            border: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .skills button:hover {
+            background-color:hsl(180, 29%, 50%) ;
+            color:hsl(180, 52%, 96%) ;
         }
     }
-
+}
+@media (max-width : 900px) {
+    .main {
+        width: 90%;
+    }
+}
+@media (max-width : 820px) {
+    .main .employee {
+        display: block;
+        margin-bottom: 50px; 
+        img {
+            margin-top: -60px;
+        }
+        .informations {
+            width: 100%;
+            margin: 0;
+        }
+        hr {
+            display: block;
+            height: 1px;
+            background-color: lightgray;
+            border: none;
+            margin: 20px 0;
+        }
+        .skills {
+            width: 100%;
+        }
+    }
+}
+@media (max-width : 400PX) {
+    img {
+        width: 60px;
+    }
 }
