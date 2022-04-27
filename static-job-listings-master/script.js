@@ -1,5 +1,6 @@
 main = document.querySelector(".main")
 collection = ""
+let skillButtons 
 async function getData(){
     let responce = await fetch("./data.json")
     let data = await responce.json()
@@ -31,5 +32,16 @@ function setdata(data){
         `
     });
     main.innerHTML = collection
+    skillButtons = document.querySelectorAll(".skills button")
+    console.log(skillButtons)
+    skillButtons.forEach(btn => {
+        btn.onclick  = ()=>{
+            document.querySelector(".searchBar div").innerHTML += `<div><span>${btn.textContent}</span><img src="./images/icon-remove.svg" ></div>`
+        }
+    })
 }
 getData()
+document.querySelector("#clear").onclick = ()=>{
+    document.querySelector(".searchFor").innerHTML = ""
+}
+

@@ -10,9 +10,49 @@ body {
 }
 .header {
     width: 100%;
-    height: 24vh;
+    height: 20vh;
     background: url(./images/bg-header-desktop.svg) no-repeat;
     background-color: hsl(180, 29%, 50%);
+}
+.searchBar {
+    display: none;
+    width:80% ;
+    min-height: 8vh;
+    margin: -20px auto 0px;
+    padding: 20px;
+    background-color: white;
+    justify-content: space-between;
+    text-align: center;
+    button {
+        background-color: transparent;
+        border: none;
+        color:hsl(180, 29%, 50%) ;
+        text-decoration:2px underline hsl(180, 29%, 50%);
+        font-weight: 700;        
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        flex-wrap: wrap;
+    }
+    span {
+        padding: 8px;
+        color:hsl(180, 29%, 50%) ;
+        background-color:hsl(180, 52%, 96%) ;
+        border: none;
+        font-weight: 700;       
+    }
+    img {
+        background-color: hsl(180, 29%, 50%);
+        padding: 8px;
+    }
+    img:hover {
+        background-color: black;
+    }
+
+
 }
 .main {
     width: 80%;
@@ -26,6 +66,7 @@ body {
         background-color: white;
         margin-bottom: 20px;
         border-radius: 10px;
+        transition: all .3s ease-in-out;
         hr {
             display: none;
         }
@@ -85,6 +126,9 @@ body {
             background-color:hsl(180, 29%, 50%) ;
             color:hsl(180, 52%, 96%) ;
         }
+    }
+    .employee:hover {
+        transform: scale(1.05);
     }
 }
 @media (max-width : 900px) {

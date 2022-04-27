@@ -13,9 +13,63 @@ body {
 
 .header {
   width: 100%;
-  height: 24vh;
+  height: 20vh;
   background: url(./images/bg-header-desktop.svg) no-repeat;
   background-color: #5ba4a4;
+}
+
+.searchBar {
+  display: none;
+  width: 80%;
+  min-height: 8vh;
+  margin: -20px auto 0px;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.searchBar button {
+  background-color: transparent;
+  border: none;
+  color: #5ba4a4;
+  -webkit-text-decoration: 2px underline #5ba4a4;
+          text-decoration: 2px underline #5ba4a4;
+  font-weight: 700;
+}
+
+.searchBar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.searchBar span {
+  padding: 8px;
+  color: #5ba4a4;
+  background-color: #effafa;
+  border: none;
+  font-weight: 700;
+}
+
+.searchBar img {
+  background-color: #5ba4a4;
+  padding: 8px;
+}
+
+.searchBar img:hover {
+  background-color: black;
 }
 
 .main {
@@ -36,6 +90,8 @@ body {
   background-color: white;
   margin-bottom: 20px;
   border-radius: 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .main .employee hr {
@@ -114,6 +170,11 @@ body {
 .main .employee .skills button:hover {
   background-color: #5ba4a4;
   color: #effafa;
+}
+
+.main .employee:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (max-width: 900px) {
