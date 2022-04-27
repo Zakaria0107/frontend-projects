@@ -40,7 +40,7 @@ body {
   font-weight: 700;
 }
 
-.searchBar div {
+.searchBar .searchFor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
