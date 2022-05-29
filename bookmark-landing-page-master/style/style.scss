@@ -1,0 +1,391 @@
+$Soft-Blue: hsl(231, 69%, 60%);
+$Soft-Red: hsl(0, 94%, 66%);
+$Grayish-Blue: hsl(229, 8%, 60%);
+$Very-Dark-Blue: hsl(229, 31%, 21%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 , h2 , h3 {
+    font-weight: 500;
+    color :$Very-Dark-Blue;
+    line-height: 1.1;
+}
+p {
+    font-weight: 400;
+    color: $Grayish-Blue;
+    margin: 20px 0;
+}
+@media (min-width : 930px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.25rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    body {
+        font-size: 1.125rem;
+    }
+}
+.btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+}
+%flex-space-betwenn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    font-size: 18px;
+    width: 100vw;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.nav-bar {
+    @extend %flex-space-betwenn ;
+    padding: 6vh 0;
+    .list {
+        width: 450px;
+        @extend %flex-space-betwenn ;
+        a {
+            font-weight: 500;
+            color: hsl(229, 31%, 21%);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            transition: all .3 ease-in-out;
+        }
+        a:hover {
+            color: $Soft-Red;
+        }
+        .login a {
+            background-color: $Soft-Red;
+            color: white;
+        }
+        .login a:hover {
+            color:$Soft-Red ;
+            outline: 2px solid $Soft-Red;
+            background-color: transparent;
+        }
+    }
+}
+
+#hero {
+    @extend %flex-space-betwenn ;
+    margin-top: 8vh;
+    .content {
+        .btn.for_chrome {
+            color: white;
+            background-color: $Soft-Blue;
+            margin-right: 10px;
+        }
+        .btn.for_chrome:hover {
+            color:$Soft-Blue;
+            background-color: transparent;
+            outline: 2px solid $Soft-Blue;
+        }
+        .btn.for_firefox:hover {
+            color: hsl(229, 31%, 21%) ;
+            background-color: transparent;
+            outline: 2px solid $Very-Dark-Blue;
+        }
+    }
+    img {
+        width: 42vw;
+    }
+    .image {
+        position: relative;
+        div {
+            position: absolute;
+            bottom: 0;
+            right: -60%;
+            width: 60vw;
+            height: 20vw;
+            border-radius: 150px;
+            z-index: -1;
+            background-color:$Soft-Blue ;
+        }
+    }
+}
+
+@media (max-width : 1100px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width : 725px) {
+    .nav-bar .list {
+        display: none;
+    }
+    #hero{
+        flex-direction: column-reverse;
+        img {
+            width: 100%;
+        }
+        .image {
+            div {
+                right: -60%;
+                width: 120vw;
+                height: 40vw;
+            }
+        }
+        .content {
+            margin: 40px 0;
+        }
+    }
+}
+@media (max-width:390px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+    #hero .content {
+        text-align: center;
+        h1 {
+            font-size: 1.5rem;
+        }
+        .btn {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+//************************************* FEATURES ******************************************
+#features {
+    .content {
+        text-align: center;
+        padding: 5vw 20vw;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1.5vw 0;
+        li {
+            position: relative;
+            color: hsl(229, 8%, 60%);
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+        }
+        li:hover {
+            color: $Soft-Red;
+        }
+        li::before {
+            content: "";
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            bottom: -24px;
+            left: 0%;
+            background-color: $Grayish-Blue;
+        }
+        .active {
+            color: $Very-Dark-Blue;
+            
+        }
+        .active::before {
+            background-color:$Soft-Red ;
+        }
+    }
+    #tabs {
+        padding: 5vw 0;
+        @extend %flex-space-betwenn ; 
+        .image {
+            img {
+                width: 40vw;
+            }
+            position: relative;
+            div {
+                position: absolute;
+                bottom: -20%;
+                left: -60%;
+                width: 60vw;
+                height: 20vw;
+                border-radius: 150px;
+                z-index: -1;
+                background-color:$Soft-Blue ;
+            }
+        }
+        .tab-content {
+            padding-left: 10vw;
+            .btn {
+                color: white;
+                background-color: $Soft-Blue;
+            } 
+            .btn:hover {
+                color:$Soft-Blue;
+                background-color: transparent;
+                outline: 2px solid $Soft-Blue;
+            } 
+        }
+        
+    }
+    .browsers {
+        @extend %flex-space-betwenn;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .browser {
+            width: 300px;
+            box-shadow: 1px 1px 5px $Grayish-Blue;
+            text-align: center;
+            padding: 4vw 2vw 0;
+            margin-bottom: 30px;
+            border: 5px;
+            .btn {
+                color: white;
+                background-color: $Soft-Blue;
+                margin: 20px 0;
+            } 
+            .btn:hover {
+                color:$Soft-Blue;
+                background-color: transparent;
+                outline: 2px solid $Soft-Blue;
+            }
+        }
+    }
+
+
+
+
+}
+@media (max-width : 730px) {
+    #features {
+        .content {
+            padding: 50px 0;
+        }
+    }
+}
+@media (max-width : 600px) {
+    #features {
+        ul {
+            flex-direction: column;
+            align-items: center;
+            li {
+                margin-bottom: 40px;
+            }
+        }
+    }    
+}
+
+@media (max-width : 725px) {
+    #features {
+        .container {
+            width: 100%;
+        }
+        #tabs {
+            flex-direction: column;
+            margin: 50px;
+            .image {
+                margin-bottom: 90px;
+                img {
+                    width: 100%;
+                }
+                div {
+                    left: -100%;
+                    width: 120vw;
+                    height: 40vw;
+                }
+            }
+            .tab-content {
+                padding-left: 0;
+                text-align: center;
+            }
+       }    
+    }
+    
+}
+@media (max-width : 350px) {
+    #features .browser {
+        width: 100% ;
+    }
+}
+//*********************************CONTACT US******************************************
+
+#contuctUs {
+    background-color: $Soft-Blue;
+    text-align: center;
+    font-weight: 400;
+    padding: 5vw 10vw;
+    h2 , p {
+        color: white;
+    }
+    input[type=submit]{
+        color: white;
+        background-color: $Soft-Red;
+        margin: 30px 0;
+    }
+    input[type=submit]:hover {
+        color:$Soft-Red;
+        background-color: white;
+        outline: 2px solid $Soft-Red;
+    }
+    input[type=email]{
+        width: 250px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        margin: 30px 0;
+    }
+}
+
+footer {
+    background-color: hsl(229, 31%, 21%);
+    padding: 20px 0;
+    .container {
+        @extend%flex-space-betwenn;
+    }
+    nav {
+        @extend%flex-space-betwenn;
+        a {
+            color: white;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+        ul {
+            @extend%flex-space-betwenn;
+            li {
+                margin-left: 40px;
+            }
+        }
+    }
+    i {
+        margin-left: 20px;
+    }
+    i:hover , a:hover {
+        color: $Soft-Red;
+    }
+}
+@media (max-width: 650px) {
+    footer {
+        text-align: left;
+        .container , ul , nav {
+            flex-direction: column;
+            text-align: left;
+        }
+        li {
+            margin: 10px 0;
+        }
+    }
+}

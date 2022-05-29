@@ -36,12 +36,24 @@ function setdata(data){
     console.log(skillButtons)
     skillButtons.forEach(btn => {
         btn.onclick  = ()=>{
-            document.querySelector(".searchBar div").innerHTML += `<div><span>${btn.textContent}</span><img src="./images/icon-remove.svg" ></div>`
+            document.querySelector(".searchBar").style.display = "flex"
+            document.querySelector(".searchBar div").innerHTML += `<div><span>${btn.textContent}</span><img src="./images/icon-remove.svg" ></div>` 
+            document.querySelectorAll(".searchFor div img").forEach(img => {
+                img.onclick = ()=>{
+                    img.parentElement.remove()
+                }
+            }) 
+            newInfo(data) 
         }
     })
+    
 }
 getData()
 document.querySelector("#clear").onclick = ()=>{
     document.querySelector(".searchFor").innerHTML = ""
 }
-
+function newInfo(){
+    results = data.filter((elt)=>{
+        elt.languages.find()
+    })
+}
