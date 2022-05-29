@@ -157,13 +157,14 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    overflow-x: hidden;
   }
   #hero img {
     width: 100%;
   }
   #hero .image div {
     right: -60%;
-    width: 120vw;
+    width: 90vw;
     height: 40vw;
   }
   #hero .content {

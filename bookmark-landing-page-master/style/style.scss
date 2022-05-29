@@ -137,13 +137,14 @@ body {
     }
     #hero{
         flex-direction: column-reverse;
+        overflow-x: hidden;
         img {
             width: 100%;
         }
         .image {
             div {
                 right: -60%;
-                width: 120vw;
+                width: 90vw;
                 height: 40vw;
             }
         }
