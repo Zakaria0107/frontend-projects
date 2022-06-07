@@ -110,7 +110,7 @@ body {
     img {
         width: 42vw;
     }
-    .image {
+    /*.image {
         position: relative;
         div {
             position: absolute;
@@ -122,7 +122,7 @@ body {
             z-index: -1;
             background-color:$Soft-Blue ;
         }
-    }
+    }*/
 }
 
 @media (max-width : 1100px) {
@@ -251,6 +251,7 @@ body {
             padding: 4vw 2vw 0;
             margin-bottom: 30px;
             border: 5px;
+            border-radius: 10px;
             .btn {
                 color: white;
                 background-color: $Soft-Blue;
@@ -307,6 +308,7 @@ body {
                 }
             }
             .tab-content {
+                width: 90vw;
                 padding-left: 0;
                 text-align: center;
             }
@@ -383,10 +385,10 @@ footer {
         text-align: left;
         .container , ul , nav {
             flex-direction: column;
-            text-align: left;
+            
         }
-        li {
-            margin: 10px 0;
+        ul , li{
+            margin-bottom: 20px;
         }
     }
 }

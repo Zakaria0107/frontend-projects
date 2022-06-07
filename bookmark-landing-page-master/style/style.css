@@ -103,6 +103,19 @@ body {
 
 #hero {
   margin-top: 8vh;
+  /*.image {
+        position: relative;
+        div {
+            position: absolute;
+            bottom: 0;
+            right: -60%;
+            width: 60vw;
+            height: 20vw;
+            border-radius: 150px;
+            z-index: -1;
+            background-color:$Soft-Blue ;
+        }
+    }*/
 }
 
 #hero .content .btn.for_chrome {
@@ -125,21 +138,6 @@ body {
 
 #hero img {
   width: 42vw;
-}
-
-#hero .image {
-  position: relative;
-}
-
-#hero .image div {
-  position: absolute;
-  bottom: 0;
-  right: -60%;
-  width: 60vw;
-  height: 20vw;
-  border-radius: 150px;
-  z-index: -1;
-  background-color: #5368df;
 }
 
 @media (max-width: 1100px) {
@@ -287,6 +285,7 @@ body {
   padding: 4vw 2vw 0;
   margin-bottom: 30px;
   border: 5px;
+  border-radius: 10px;
 }
 
 #features .browsers .browser .btn {
@@ -345,6 +344,7 @@ body {
     height: 40vw;
   }
   #features #tabs .tab-content {
+    width: 90vw;
     padding-left: 0;
     text-align: center;
   }
@@ -422,10 +422,9 @@ footer i:hover, footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: left;
   }
-  footer li {
-    margin: 10px 0;
+  footer ul, footer li {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
