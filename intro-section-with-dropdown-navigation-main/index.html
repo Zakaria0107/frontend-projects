@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-alwhite">
+  <header class=" flex flex-row justify-between items-center sm:px-8 px-2 py-6">
+    <nav class="flex flex-row"> 
+      <a href="#" class="logo"><img src="./images/logo.svg" alt=""></a>
+      <ul class="hidden lg:flex flex-row items-center space-x-10 ml-16 font-meduim text-gray">
+        <li id="features" class="relative" ><a href="#" class="flex items-center">Features <img class="w-3 h-2 ml-2" src="./images/icon-arrow-down.svg" alt=""></a> 
+          <ul class="hidden absolute bg-white p-4 w-40 rounded-lg shadow-2xl  top-10 right-1">
+              <li class="mb-2" ><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+              <li class="mb-2"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+              <li class="mb-2"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+              <li class="mb-2"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-planning.svg" alt=""> Planing</a></li>
+          </ul>
+        
+        </li>
+        <li id="company" class="relative"><a href="#" class="flex items-center">Company <img class="w-3 h-2 ml-2" src="./images/icon-arrow-down.svg" alt=""></a>
+          <ul class="hidden absolute bg-white p-4 w-36 rounded-lg shadow-2xl  top-10 left-1">
+            <li class="mb-2" >History</li>
+            <li class="mb-2">Our Team</li>
+            <li class="mb-2">Blog</li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <div class="hidden lg:block font-meduim text-gray">
+      <a href="" class="mr-8">Login</a>
+      <a href="" class="py-2 px-4 border-2 border-gray rounded-lg hover:text-black hover:border-black">Register</a>
+    </div>
+    <button id="menu" class="lg:hidden"><img src="./images/icon-menu.svg" alt=""></button>
+    <nav id="navBar" class=" hidden absolute right-0 top-0 w-9/12 h-screen bg-white p-6 sm:p-8 flex flex-col">
+        <button id="close" class="self-end"><img src="./images/icon-close-menu.svg" alt=""></button>
+        <ul class="mt-6">
+          <li id="mobile-features" class=" mb-6 text-gray"><a  class=" cursor-pointer flex justify-between items-center w-max">Features <img class="ml-2" src="./images/icon-arrow-down.svg" alt=""></a>
+            <ul class="ml-6 hidden">
+              <li class="my-4" ><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-todo.svg" alt=""> Todo List</a></li>
+              <li class="mb-4"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-calendar.svg" alt=""> Calendar</a></li>
+              <li class="mb-4"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-reminders.svg" alt=""> Reminders</a></li>
+              <li class="mb-4"><a href="" class="flex items-center"><img class="mr-2" src="./images/icon-planning.svg" alt=""> Planing</a></li>
+          </ul>
+          </li>
+          <li id="mobile-company" class="mb-6 text-gray"><a class="cursor-pointer flex justify-between items-center w-max ">Company <img class="ml-2" src="./images/icon-arrow-down.svg" alt=""></a>
+            <ul class="ml-6 hidden">
+              <li class="my-4" >History</li>
+              <li class="mb-4">Our Team</li>
+              <li class="mb-4">Blog</li>
+            </ul>
+          </li>
+          <li class="mb-6 text-gray"><a href="">Careers</a></li>
+          <li class="mb-6 text-gray"><a href="">About</a></li>
+        </ul>
+        <button class="text-gray mt-4">Login</button>
+        <button class="text-gray border-2 border-gray p-2 rounded-xl mt-4">Register</button>
+    </nav>
+  </header>
+  <div class="sm:text-left text-center flex md:flex-row flex-col-reverse justify-between items-center sm:mx-10 mx-2 lg:mx-40 md:mt-16 ">
+    <div class=" xl:pr-40 md:pr-10 mt-12 ">
+      <h1 class="text-4xl  sm:text-6xl font-bold ">Make remote work</h1>
+      <p class=" sm:my-10 my-4 text-gray text-md">Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+      <button class=" text-white bg-black border-2 border-black rounded-xl py-3 px-6 font-meduim mb-20 hover:text-black hover:bg-white " >Learn more</button>
+      <div class="flex flex-row justify-between mb-20 md:mb-0">
+          <img class="sm:w-20 sm:h-6 w-14" src="./images/client-databiz.svg" alt="">
+          <img class="sm:w-20 sm:h-6 w-14" src="./images/client-audiophile.svg" alt="">
+          <img class="sm:w-20 sm:h-6 w-14" src="./images/client-meet.svg" alt="">
+          <img class="sm:w-20 sm:h-6 w-14" src="./images/client-maker.svg" alt="">
+      </div>
+    </div>
+    <img class="w-5/12 hidden md:block" src="./images/image-hero-desktop.png" alt="">
+    <img class="md:hidden" src="./images/image-hero-mobile.png" alt="">
+  </div>
+  <script>
+      document.querySelector("#features").onclick = () => {
+        document.querySelector("#features ul ").classList.toggle("hidden");
+      }
+      document.querySelector("#company").onclick = () => {
+        document.querySelector("#company ul ").classList.toggle("hidden");
+      }
+      document.querySelector("#mobile-features").onclick = () => {
+        document.querySelector("#mobile-features ul ").classList.toggle("hidden");
+      }
+      document.querySelector("#mobile-company").onclick = () => {
+        document.querySelector("#mobile-company ul ").classList.toggle("hidden");
+      }
+      document.querySelector("#menu").onclick = ()=> {
+        document.querySelector("#navBar").classList.toggle("hidden");
+      }
+      document.querySelector("#close").onclick = ()=> {
+        document.querySelector("#navBar").classList.toggle("hidden");
+      }
+  </script>
+</body>
+</html>
