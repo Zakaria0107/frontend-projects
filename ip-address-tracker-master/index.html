@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+  integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+  crossorigin=""/>
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <header>
+    <h2>IP Address Tracker</h2>
+    <form action="">
+      <input type="text" placeholder="Search for any IP address">
+      <button type="submit"><img src="./images/icon-arrow.svg" alt=""></button>
+    </form>
+  </header>
+  <div class="container">
+    <div class="content">
+      <div>
+        <p>IP Address</p>
+        <h2 id="ip"></h2>
+      </div>
+      <div class="line"></div>
+      <div>
+        <p>Location</p>
+        <h2 id="location"></h2>
+      </div>
+      <div class="line"></div>
+      <div>
+        <p>Timezone</p>
+        <h2 id="time"></h2>
+      </div>
+      <div class="line"></div>
+      <div>
+        <p>ISP</p>
+        <h2 id="isp"></h2>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+  integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+  crossorigin=""></script>
+  <script src="./js/script.js" ></script>
+</body>
+</html>
